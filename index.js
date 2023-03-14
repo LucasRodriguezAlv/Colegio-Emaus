@@ -1,16 +1,13 @@
-//const JUEGO = prompt("Ingrese su juego favorito")
-//const ANIO = prompt ("Ingresa fecha en que lo jugaste")
 
-//const FRASE = "Yo jugue al " + JUEGO + " en el año " + ANIO
-//alert (FRASE)
 
 function InicioDeSesion (){
-    const usuario = prompt ("¡Bienvenido alumno! Ingrese su corrreo electronico")
+    const usuario = prompt ("¡Bienvenido Profe! Ingrese su corrreo electronico")
     const contrasenia = prompt ("Ingrese su contraseña")
     alert ("Bienvenido " + usuario)
 
 }
 InicioDeSesion ()
+console.log (InicioDeSesion)
 
 let seleccionMateria  = parseInt (
     prompt (
@@ -30,17 +27,43 @@ if (seleccionMateria === 1) {
     alert ("No escogio ninguna materia" )
 }
 
-
-
-const CALIFICACIONES = prompt ("Ingresa la cantidad de calificaciones trimestrales")
-let sumatoria = 0
-let promedio = 0
-
-for (let index = 1; index <= CALIFICACIONES; index++){
-    const NOTA = prompt ("Ingrese su nota " + index)
-    sumatoria = sumatoria + parseFloat (NOTA) 
-    console.log (sumatoria)
+class Alumnos{
+    constructor (nombre, apellido, dni, curso){
+        this.nombre = nombre
+        this.apellido = apellido
+        this.dni = dni 
+        this.curso = curso
+    }
 }
+
+
+function crearAlumno () {
+    let alumno = []
+    let agregarAlumnos = prompt ("¿Cuantos alumnos desea ingresar?")
+    for (let index = 0; index < agregarAlumnos; index ++){
+        let nombre = prompt ("Ingresa tu nombre")
+        let apellido = prompt ("Ingresa tu apellido")
+        let curso = prompt ("Ingresa tu curso")
+        let dni = prompt ("Ingrese su dni")
+
+}
+
+let AlumnoRegistrado = new Alumnos (nombre, apellido, curso, dni)
+        alumno.push (AlumnoRegistrado)
+
+console.log (Alumnos)
+return Alumnos
+
+}
+
+crearAlumno ()
+
+
+//for (let index = 1; index <= CALIFICACIONES; index++){
+    //const NOTA = prompt ("Ingrese su nota " + index)
+    //sumatoria = sumatoria + parseFloat (NOTA) 
+    //console.log (sumatoria)
+///}
 
 promedio = sumatoria /CALIFICACIONES
 alert ("El promedio es " + promedio)   
@@ -51,3 +74,19 @@ if  (promedio >= 7){
 } else{
     alert ("El alumno esta desaprobado")
 }
+
+//const objetoAlumno = new Alumnos (
+  //  nombre,
+    //apellido,
+    //curso,
+    //notas,
+    //promedio,
+//)
+
+//function Alumnos(nombre, apellido, curso, notas, promedio){
+  //  this.nombre = nombre
+    //this.apellido = apellido
+    //this.curso = curso
+    //this.notas = notas
+    //this.promedio = promedio 
+//}
